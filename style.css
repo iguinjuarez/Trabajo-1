@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+}
+
+h1{
+    color: #581882;
+}
+a{
+    text-decoration: none;
+}
+
+.sidebar-layout {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: darkturquoise;
+    padding-left: 20px;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+.sidebar a {
+    display: block;
+    padding-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+.sidebar a.selected {
+    background-color: white;
+    padding: 0px 0px 0px 10px;
+    font-weight: 700;
+}
+
+.sidebar a:hover {
+    background-color: paleturquoise;
+}
+.head-title {
+    flex: 1;
+    padding: 0px 20px 0px;
+    box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.75);
+}
+.head-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px 0px;
+    box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.75);
+}
+
+.card {
+    background-color: white;
+    padding: 20px 0px;
+    margin: 20px 0px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.75);
+    text-align: center;
+}
+.button-nav-add {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.75);
+    background-color: darkturquoise;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+    border : none;
+}
+.button-nav-back {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.75);
+    background-color: red;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+    border : none;
+}
+.button-search {
+    border : none;
+}
+.body-student {
+    display: flex;
+    padding: 20px 20px 5px;
+    
+}
+.page-student {
+    flex: 1;
+}
+
+input {
+    width: 50%;
+    align-content: end;
+}
+.input-full {
+    width: 100%;
+}
+.table-student {
+    padding: 0px 20px 0px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #7a7a7a;
+}
+table, th, td {
+    border: 1px solid #7a7a7a;
+}
+.pagination {
+    display: flex;
+    padding: 5px 20px 0px;
+    justify-content: flex-end;
+    align-items: center;
+}form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px 20px 0px 20px;    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.75);
+}
+.form-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 0px 20px;
+}

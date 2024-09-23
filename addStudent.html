@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Trabajo Practico 1</title>
+    <script src="getInfoFromStorage.js"></script>
+    <script src="addInfo.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <div class="sidebar">
+            <h3>Trabajo Práctico 1</h3>
+                <a href="index.html">Página Principal</a>
+                <a href="student.html" class="selected">Alumnos</a>        
+        </div>
+        <div class="page-student">
+            <div class="head-nav">
+                <h2>Alumnos</h2>
+                <a href="student.html" class="button-nav-back">Atras</a> 
+            </div>
+            <form onsubmit="addInfo(event)">
+                <div class="form-add">                   
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="name" name="name" required> 
+                </div>
+                <div class="form-add">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="lastName" name="lastName" required>       
+                </div>
+                <div class="form-add">
+                    <button class="button-nav-add" type="submit">Agregar</button>
+                </div>                            
+            </form>
+        </div>           
+    </div>
+  
+</body>
+</html>
