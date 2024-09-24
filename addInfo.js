@@ -16,5 +16,5 @@ const addInfo = (event) => {
     document.getElementById('name').value = null;
     document.getElementById('lastName').value = null;
 
-    window.location.href = 'addStudent.html';
+    window.location.href = 'student.html';
 };

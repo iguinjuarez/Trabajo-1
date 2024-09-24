@@ -4,4 +4,5 @@ const getInfoFromStorage = () => {
     return listStudents
         ? JSON.parse(listStudents)
         : [];
+
 }

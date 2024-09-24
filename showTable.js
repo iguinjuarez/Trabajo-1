@@ -1,20 +1,47 @@
-const showStudents = () => {
-    const tbodyElement = document.getElementsByTagName('tbody')[0];
+function getStudents() {
+    let listStudents = localStorage.getItem('listStudents');
 
-    if (!tbodyElement) {
-        return;
-    }
+    return listStudents
+        ? JSON.parse(listStudents)
+        : [];
+}
 
-    tbodyElement.innerHTML = '';
+function showStudents(students) {
+    const tbody = document.querySelector("#tableStudent tbody");
+    tbody.innerHTML = ''; 
 
-    let listStudents = getInfoFromStorage();
+    students.forEach(student => {
+        const row = document.createElement("tr");
 
-    listStudents.forEach((student) => {
-        const trElement = document.createElement('tr');
-        trElement.innerHTML = `<td>${student.file}<td>${student.name}</td><td>${student.lastName}</td>`;
+        const fileCell = document.createElement("td");
+        fileCell.textContent = student.file;
+        row.appendChild(fileCell);
 
-        tbodyElement.appendChild(trElement);
+        const nameCell = document.createElement("td");
+        nameCell.textContent = student.name;
+        row.appendChild(nameCell);
+
+        const lastNameCell = document.createElement("td");
+        lastNameCell.textContent = student.lastName;
+        row.appendChild(lastNameCell);
+
+        tbody.appendChild(row);
     });
-};
+}
 
-showStudents(); 
+function filterStudentsByLastName() {
+    const searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
+    const allStudents = getStudents();
+    
+    const filteredStudents = allStudents.filter(student => 
+        student.lastName.toLowerCase().includes(searchInput)
+    );
+
+    showStudents(filteredStudents);
+}
+
+document.getElementById('searchButton').addEventListener('click', filterStudentsByLastName);
+
+document.addEventListener('DOMContentLoaded', () => {
+    showStudents(getStudents());
+});
